@@ -8,11 +8,8 @@ import { ProductService } from './product.service';
     styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit
-{    
-    private _productService;
-    constructor(productService: ProductService) {
-        this._productService = productService
-    }
+{
+    constructor(private productService: ProductService) {}
     
     pageTitle: string = 'Product List';    
     filterByTitle: string = 'Filter by';
@@ -32,6 +29,7 @@ export class ProductListComponent implements OnInit
 
     filteredProducts: IProduct[];
     products: IProduct[];
+    errorMessage: string;
 
     performFilter(filterBy: string): IProduct[] {
         filterBy = filterBy.toLocaleLowerCase();
@@ -43,8 +41,14 @@ export class ProductListComponent implements OnInit
     }
     onNotify(message: string): void {}    
     ngOnInit(): void {        
-        this.products = this._productService.getProducts();
-        this.filteredProducts = this.products;
+        this.productService.getProducts().subscribe({
+            next: products => { 
+                this.products = products;
+                this.filteredProducts = this.products;
+            },
+            error: err => { this.errorMessage = err }
+        });        
+        this.showImage = true;
     }
 }
 

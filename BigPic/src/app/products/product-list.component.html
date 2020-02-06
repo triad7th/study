@@ -9,10 +9,8 @@
                 <input type='text'
                     [(ngModel)]='listFilter'/>
             </div>
-        </div>
-        <div class='row'>
             <div class='col-md-6'>
-                <h4>{{filteredByTitle}}{{listFilter}}</h4>
+                {{filteredByTitle}}{{listFilter}}
             </div>
         </div>
         <div class='table-responsive'>
@@ -39,9 +37,13 @@
                                 [title]='product.productName'
                                 [style.width.px]='imageWidth'
                                 [style.margin.px]='imageMargin'
-                                *ngIf='showImage'>
+                                *ngIf='showImage'/>
                         </td>
-                        <td>{{product.productName}}</td>
+                        <td>
+                            <a [routerLink]="['/products', product.productId]">
+                                {{product.productName}}
+                            </a>
+                        </td>
                         <td>{{product.productCode | lowercase | convertToSpaces:'-'}}</td>
                         <td>{{product.releaseDate}}</td>
                         <td>{{product.price | currency:'USD':'symbol':'1.2-2'}}</td>
