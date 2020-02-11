@@ -9,21 +9,21 @@ import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
-  imports: [
-    RouterModule.forChild([
-      { path: 'products', component: ProductListComponent },
-      { 
-        path: 'products/:id',
-        canActivate: [ProductDetailGuard],
-        component: ProductDetailComponent
-      },
-    ]),
-    SharedModule
-  ],
-  declarations: [
-    ProductListComponent,
-    ProductDetailComponent,
-    ConvertToSpacesPipe
-  ]
+    imports: [
+        RouterModule.forChild([
+            { path: 'products', component: ProductListComponent },
+            { 
+                path: 'products/:id',
+                canActivate: [ProductDetailGuard],
+                component: ProductDetailComponent
+            },
+        ]),
+        SharedModule
+    ],
+    declarations: [
+        ProductListComponent,
+        ProductDetailComponent,
+        ConvertToSpacesPipe
+    ]
 })
 export class ProductModule { }
