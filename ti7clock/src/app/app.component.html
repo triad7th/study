@@ -1,0 +1,53 @@
+<div class="row" style="padding-top: 30px;"></div>
+<div class="row">
+  <div class="col">
+    <table class="table" style="width: 770px;">
+      <tbody>
+        <tr>
+          <th style="width: 230px; padding-top:25px;">
+            <img src="https://cdn4.iconfinder.com/data/icons/rounded-square-national-flags/512/USA-128.png" class="img-fluid center" style="width:180px;" />
+          </th>
+          <th>
+            <h1 class="card-title" style="font-size: 100px; text-align:right">{{now | date:'mediumTime'}}</h1>
+            <h5 class="card-text" style="font-size: 32px; text-align:right">{{now | date:'MMM d, y, z'}}</h5>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="row" style="padding-top: 40px;"></div>
+<div class="row">
+  <div class="col">
+    <table class="table" style="width: 350px;">
+      <tbody>
+        <tr>
+          <th>
+            <img src="https://cdn4.iconfinder.com/data/icons/rounded-square-national-flags/512/GREAT_BRITAIN-128.png" class="img-fluid center" style="width:83px; padding-top:5px; padding-left:3px;" />
+          </th>
+          <th>
+            <h1 class="card-title">{{now | date:'mediumTime' : "UTC"}}</h1>
+            <h5 class="card-text">{{now | date:'MMM d, y, z' : "UTC"}}</h5>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col">
+    <table class="table" style="width: 350px;">
+      <tbody>
+        <tr>
+          <th>
+            <img src="https://cdn1.iconfinder.com/data/icons/rounded-square-national-flags/512/SOUTH_KOREA-128.png" class="img-fluid center" style="width:83px; padding-top:5px; padding-left:3px; " />
+          </th>
+          <th>
+            <h1 class="card-title">{{now | date:'mediumTime' : "UTC+9"}}</h1>
+            <h5 class="card-text">{{now | date:'MMM d, y, z' : "UTC+9"}}</h5>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
