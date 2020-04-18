@@ -1,16 +1,14 @@
 <div class="container-fluid">
-  <div class="row" style="padding-top:40px;"></div>
+  <div class="row padding40"></div>
   <div class="row">
     <div class="col-sm">
-      <table class="table" style="width: 770px;">
+      <table class="table big-clock">
         <tbody>
           <tr>
-            <th style="width: 230px;">
-              <img src="https://cdn4.iconfinder.com/data/icons/rounded-square-national-flags/512/USA-128.png" class="img-fluid center" style="width:180px;" />
-            </th>
+            <th class="flag"><img src="{{flags['US']}}" class="img-fluid center" /></th>
             <th>
-              <h1 class="card-title" style="font-size: 100px; text-align:right; padding-right:5px;">{{now | date:'mediumTime'}}</h1>
-              <h5 class="card-text" style="font-size: 32px; text-align:right; padding-right:10px; ">{{now | date:'MMM d, y, z'}}</h5>
+              <h1 class="card-title big-title" >{{now | date:'hh:mm a'}}<span class="big-title-second">{{now | date: 'ss'}}</span></h1>
+              <h5 class="card-text big-text">{{now | date:'MMM d, y, z'}}</h5>
             </th>
           </tr>
         </tbody>
@@ -18,32 +16,28 @@
     </div>
   </div>
   <div class="row"></div>
-  <div class="row" style="padding-top:40px;">
+  <div class="row padding40">
     <div class="col-sm">
-      <table class="table" style="width: 350px;">
+      <table class="table small-clock">
         <tbody>
           <tr>
+            <th class="flag"><img src="{{flags['UK']}}" class="img-fluid center"/></th>
             <th>
-              <img src="https://cdn4.iconfinder.com/data/icons/rounded-square-national-flags/512/GREAT_BRITAIN-128.png" class="img-fluid center" style="width:83px; padding-top:5px; padding-left:3px;" />
-            </th>
-            <th>
-              <h1 class="card-title">{{now | date:'mediumTime' : "UTC"}}</h1>
-              <h5 class="card-text">{{now | date:'MMM d, y, z' : "UTC"}}</h5>
+              <h1 class="card-title small-title">{{now | date:'hh:mm a' : "UTC"}}</h1>
+              <h5 class="card-text small-text">{{now | date:'MMM d, y, z' : "UTC"}}</h5>
             </th>
           </tr>
         </tbody>
       </table>
     </div>
     <div class="col-sm">
-      <table class="table" style="width: 350px;">
+      <table class="table small-clock">
         <tbody>
           <tr>
+            <th class="flag"><img src="{{flags['KR']}}" class="img-fluid center"/></th>
             <th>
-              <img src="https://cdn1.iconfinder.com/data/icons/rounded-square-national-flags/512/SOUTH_KOREA-128.png" class="img-fluid center" style="width:83px; padding-top:5px; padding-left:3px; " />
-            </th>
-            <th>
-              <h1 class="card-title">{{now | date:'mediumTime' : "UTC+9"}}</h1>
-              <h5 class="card-text">{{now | date:'MMM d, y, z' : "UTC+9"}}</h5>
+              <h1 class="card-title small-title">{{now | date:'hh:mm a' : "UTC+9"}}</h1>
+              <h5 class="card-text small-text">{{now | date:'MMM d, y, z' : "UTC+9"}}</h5>
             </th>
           </tr>
         </tbody>
@@ -51,4 +45,3 @@
     </div>
   </div>
 </div>
-
